@@ -15,7 +15,9 @@ function saveToDos() {
 // Function no.2 : event 발생하면 타겟을 없애줌 -> no.3 에서 사용
 function deleteTodo(event) {
   const li = event.target.parentElement; // 어떤 li 인지
+  toDos = toDos.filter((toDo) => toDo.id !== parseInt(li.id));
   li.remove();
+  saveToDos();
 }
 
 // Function no.3 :
