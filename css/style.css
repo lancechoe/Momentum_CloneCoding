@@ -74,5 +74,59 @@ body {
     margin-left: 10px;
     color: white;
   }
+
+  /* To-Do 리스트를 포스트잇처럼 보이게 꾸미기 */
+#todo-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* 가로 가운데 정렬 */
+  gap: 12px;
+  max-width: 600px;
+  width: 100%;
+  margin-top: 20px;
+  padding: 0;
+}
+
+
+/* 개별 To-Do 항목 */
+#todo-list li {
+  background: #fff475; /* 노란 포스트잇 느낌 */
+  padding: 10px 12px;
+  border-radius: 10px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+  color: #333;
+  font-weight: 600;
+  position: relative;
+  min-height: 40px;
+  width: 100%;
+  max-width: 160px;
+  word-break: break-word;
+  text-align: left;
+  transition: transform 0.2s;
+}
+
+#todo-list li:hover {
+  transform: rotate(-1deg) scale(1.02);
+}
+
+/* To-Do 삭제 버튼 */
+.todo-button {
+  position: absolute;
+  top: 4px;
+  right: 0px;
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  color: #444;
+  transition: transform 0.2s;
+}
+
+.todo-button:hover {
+  transform: scale(1.2);
+  color: red;
+}
+
+
   
   
